@@ -24,6 +24,10 @@ public abstract class ContaBancaria {
      */
     public abstract void sacar(double valor);
     
+    /**
+     * Método Abstracto para o depósito.
+     * @param valor 
+     */
     public abstract void depositar(double valor);
     
 }
