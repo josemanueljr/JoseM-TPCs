@@ -65,7 +65,7 @@ public abstract class ContaBancaria {
     
     /**
      * Altera o historico
-     * @param historico 
+     * @param historico  recebe um texto do historico.
      */
     public void setHistorico(String historico) {
         this.historico = historico;
