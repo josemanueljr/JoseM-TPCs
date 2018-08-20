@@ -12,6 +12,9 @@ package Model;
 
 
 public abstract class ContaBancaria {
+    /**
+     * Declaração das variáveis numeroConta, saldo, historico.
+     */
     private int numeroDeConta;
     private double saldo;
     private String historico;
@@ -23,23 +26,39 @@ public abstract class ContaBancaria {
      * @param valor recebe por parametro o valor
      */
     public abstract void sacar(double valor);
-
+    
+    /**
+     * Metodo para devolver Numrode conta
+     * @return devolve o número de conta.
+     */
     public int getNumeroDeConta() {
         return numeroDeConta;
     }
-
+    /**
+     * metodo para definir o número de conta
+     * @param numeroDeConta Recebe o número de conta.
+     */
     public void setNumeroDeConta(int numeroDeConta) {
         this.numeroDeConta = numeroDeConta;
     }
-
+    /**
+     * Metodo para obter o saldo
+     * @return devolve o saldo
+     */
     public double getSaldo() {
         return saldo;
     }
-
+    /**
+     * Método para alterar o saldo
+     * @param saldo Parametro Saldo
+     */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-
+    /**
+     * Metodo para obter o histórico
+     * @return Historico
+     */
     public String getHistorico() {
         return historico;
     }
@@ -47,7 +66,12 @@ public abstract class ContaBancaria {
     public void setHistorico(String historico) {
         this.historico = historico;
     }
-
+    /**
+     * Metodo contrutor da classe
+     * @param numeroDeConta Numero da conta
+     * @param saldo Saldo da conta
+     * @param historico Histórico
+     */
     public ContaBancaria(int numeroDeConta, double saldo, String historico) {
         this.numeroDeConta = numeroDeConta;
         this.saldo = saldo;
