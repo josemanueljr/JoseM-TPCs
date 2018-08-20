@@ -9,7 +9,7 @@ package Model;
  *
  * @author JoseM
  */
-public class ContaCorrente extends ContaBancaria {
+public class ContaCorrente extends ContaBancaria implements Imprimivel {
 
     private double taxaDeOperacao;
 
@@ -41,6 +41,11 @@ public class ContaCorrente extends ContaBancaria {
     public void depositar(double valor) {
         setSaldo(getSaldo()-taxaDeOperacao);
         setSaldo(getSaldo()+valor);
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println("Nr+Conta:"+getNumeroDeConta()+" saldo:"+getSaldo());
     }
     
 }

@@ -9,7 +9,7 @@ package Model;
  *
  * @author JoseM
  */
-public class ContaPoupanca extends ContaBancaria {
+public class ContaPoupanca extends ContaBancaria implements Imprimivel {
     
     private double limite;
 
@@ -37,6 +37,11 @@ public class ContaPoupanca extends ContaBancaria {
     @Override
     public void depositar(double valor) {
         setSaldo(getSaldo()+valor);
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println("Nr+Conta:"+getNumeroDeConta()+" saldo:"+getSaldo()+" Limite:"+getLimite());
     }
     
 }
