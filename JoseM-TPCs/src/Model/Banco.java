@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * Classe Banco que receberá diversas contas.
  * @author JoseM
  */
-public class Banco {
+public class Banco implements Imprimivel{
     ArrayList<ContaBancaria> contas=new ArrayList();
     
     /**
@@ -30,6 +30,35 @@ public class Banco {
       
       contas.remove(conta);
     } catch (IndexOutOfBoundsException e) {}
+    }
+    
+    public ContaBancaria pesquisa(int numero){
+        ContaBancaria contaSearch;
+        
+        for(int i=0; i<contas.size();i++){
+            contaSearch=contas.get(i);
+            if(contaSearch.getNumeroDeConta()==numero){
+            return contaSearch;
+        }
+        }
+        
+        return null;
+    }
+
+    @Override
+    public void mostrarDados() {
+        ContaBancaria aux;
+        for(int i=0; i<contas.size();i++){
+            aux=contas.get(i);
+            if(aux instanceof ContaCorrente){
+                ContaCorrente cc=(ContaCorrente)aux;
+                System.out.println("NrConta:"+cc.getNumeroDeConta()+" saldo:"+cc.getSaldo()+" Limite: "+cc.getTaxaDeOperacao());
+            }else{
+                ContaPoupanca cp=(ContaPoupanca)aux;
+                System.out.println("NrConta:"+cp.getNumeroDeConta()+" saldo:"+cp.getSaldo()+" Limite: "+cp.getLimite());
+            }
+        }
+        
     }
     
 }
