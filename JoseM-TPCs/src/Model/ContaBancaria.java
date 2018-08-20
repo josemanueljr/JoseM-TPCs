@@ -62,9 +62,24 @@ public abstract class ContaBancaria {
     public String getHistorico() {
         return historico;
     }
-
+    
+    /**
+     * Altera o historico
+     * @param historico 
+     */
     public void setHistorico(String historico) {
         this.historico = historico;
+    }
+    /**
+     * Método para transferencia de dinheiro.
+     * @param valor Recebe o valor a transferir
+     * @param conta conta do beneficiario
+     */
+    public void transferir(double valor, ContaBancaria conta){
+        if(valor<this.saldo){
+            this.sacar(valor);
+            conta.depositar(valor);
+        }else System.out.println("Valor não disponível na conta");
     }
     /**
      * Metodo contrutor da classe
