@@ -13,6 +13,11 @@ public class ContaCorrente extends ContaBancaria {
 
     private double taxaDeOperacao;
 
+    public ContaCorrente(double taxaDeOperacao, int numeroDeConta, double saldo, String historico) {
+        super(numeroDeConta, saldo, historico);
+        this.taxaDeOperacao = taxaDeOperacao;
+    }
+
     public double getTaxaDeOperacao() {
         return taxaDeOperacao;
     }
@@ -25,12 +30,17 @@ public class ContaCorrente extends ContaBancaria {
     
     @Override
     public void sacar(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        setSaldo(getSaldo()-taxaDeOperacao);
+        if (getSaldo()>valor){
+            setSaldo(getSaldo()-valor);
+            System.out.println("Valor levantado com sucesso");
+        }
     }
 
     @Override
     public void depositar(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        setSaldo(getSaldo()-taxaDeOperacao);
+        setSaldo(getSaldo()+valor);
     }
     
 }

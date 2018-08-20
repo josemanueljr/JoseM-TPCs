@@ -23,6 +23,36 @@ public abstract class ContaBancaria {
      * @param valor recebe por parametro o valor
      */
     public abstract void sacar(double valor);
+
+    public int getNumeroDeConta() {
+        return numeroDeConta;
+    }
+
+    public void setNumeroDeConta(int numeroDeConta) {
+        this.numeroDeConta = numeroDeConta;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public String getHistorico() {
+        return historico;
+    }
+
+    public void setHistorico(String historico) {
+        this.historico = historico;
+    }
+
+    public ContaBancaria(int numeroDeConta, double saldo, String historico) {
+        this.numeroDeConta = numeroDeConta;
+        this.saldo = saldo;
+        this.historico = historico;
+    }
     
     /**
      * Método Abstracto para o depósito.

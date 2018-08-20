@@ -13,6 +13,11 @@ public class ContaPoupanca extends ContaBancaria {
     
     private double limite;
 
+    public ContaPoupanca(double limite, int numeroDeConta, double saldo, String historico) {
+        super(numeroDeConta, saldo, historico);
+        this.limite = limite;
+    }
+
     public double getLimite() {
         return limite;
     }
@@ -23,12 +28,15 @@ public class ContaPoupanca extends ContaBancaria {
     
     @Override
     public void sacar(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (getSaldo()>valor+limite){
+            setSaldo(getSaldo()-valor);
+            System.out.println("Valor levantado com sucesso");
+        }
     }
 
     @Override
     public void depositar(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        setSaldo(getSaldo()+valor);
     }
     
 }
