@@ -27,9 +27,13 @@ public class Executavel {
         cc.depositar(500);
         cp.depositar(600);
         
+        cp.transferir(150, cc);
+        
         cc.sacar(2500);
         cp.sacar(7000);
-            
+        
+        
+        
         Relatorio relat=new Relatorio();
         
         relat.gerarRelatorio(cp);
