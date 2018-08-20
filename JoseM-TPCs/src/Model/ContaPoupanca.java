@@ -72,7 +72,7 @@ public class ContaPoupanca extends ContaBancaria implements Imprimivel {
      */
     @Override
     public void mostrarDados() {
-        System.out.println("Nr+Conta:"+getNumeroDeConta()+" saldo:"+getSaldo()+" Limite:"+getLimite());
+        System.out.println("NrConta:"+getNumeroDeConta()+" saldo:"+getSaldo()+" Limite:"+getLimite());
     }
     
 }

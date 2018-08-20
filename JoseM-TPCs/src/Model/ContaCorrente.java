@@ -78,7 +78,7 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
      */
     @Override
     public void mostrarDados() {
-        System.out.println("Nr+Conta:"+getNumeroDeConta()+" saldo:"+getSaldo());
+        System.out.println("NrConta:"+getNumeroDeConta()+" saldo:"+getSaldo());
     }
     
 }

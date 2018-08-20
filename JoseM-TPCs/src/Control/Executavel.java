@@ -7,6 +7,7 @@ package Control;
 
 import Model.ContaCorrente;
 import Model.ContaPoupanca;
+import Model.Relatorio;
 import javax.swing.JOptionPane;
 
 /**
@@ -28,6 +29,12 @@ public class Executavel {
         
         cc.sacar(2500);
         cp.sacar(7000);
+            
+        Relatorio relat=new Relatorio();
+        
+        relat.gerarRelatorio(cp);
+        relat.gerarRelatorio(cc);
+       
         
     }
     
