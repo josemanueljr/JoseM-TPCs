@@ -46,10 +46,12 @@ public class ContaPoupanca extends ContaBancaria implements Imprimivel {
      */
     @Override
     public void sacar(double valor) {
-        if (getSaldo()>valor+limite){
+        if (getSaldo()+limite>valor){
             setSaldo(getSaldo()-valor);
-            System.out.println("Valor levantado com sucesso");
-        }
+            System.out.println("Valor: "+valor+" levantado com sucesso na conta poupança: "+getNumeroDeConta());
+            
+        }else System.out.println("Valor indisponível");
+        System.out.println("O seu saldo actual é: "+getSaldo());
     }
      /**
      * Método Overrided da classe mãe
@@ -59,6 +61,8 @@ public class ContaPoupanca extends ContaBancaria implements Imprimivel {
     @Override
     public void depositar(double valor) {
         setSaldo(getSaldo()+valor);
+        System.out.println("Depositou com sucesso: "+valor+" MT na conta poupança: "+getNumeroDeConta());
+        System.out.println("O seu saldo actual é: "+getSaldo());
     }
     /**
      * Método Overrided da interface

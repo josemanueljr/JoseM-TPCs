@@ -23,6 +23,12 @@ public class Executavel {
         ContaCorrente cc=new ContaCorrente(5, 7312345, 3000, "");
         ContaPoupanca cp=new ContaPoupanca(2000, 7412345, 5000, "");
         
+        cc.depositar(500);
+        cp.depositar(600);
+        
+        cc.sacar(2500);
+        cp.sacar(7000);
+        
     }
     
 }

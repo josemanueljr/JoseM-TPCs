@@ -52,8 +52,9 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
         setSaldo(getSaldo()-taxaDeOperacao);
         if (getSaldo()>valor){
             setSaldo(getSaldo()-valor);
-            System.out.println("Valor levantado com sucesso");
-        }
+            System.out.println("Valor: "+valor+" levantado com sucesso na conta corrente: "+getNumeroDeConta());
+        }else System.out.println("Valor indisponível");
+        System.out.println("O seu saldo actual é: "+getSaldo());
     }
     
      /**
@@ -65,6 +66,8 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
     public void depositar(double valor) {
         setSaldo(getSaldo()-taxaDeOperacao);
         setSaldo(getSaldo()+valor);
+        System.out.println("Depositou com sucesso: "+valor+" MT na conta corrente: "+getNumeroDeConta());
+        System.out.println("O seu saldo actual é: "+getSaldo());
     }
     
      /**
