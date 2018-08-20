@@ -80,7 +80,7 @@ public abstract class ContaBancaria {
     
     /**
      * Método Abstracto para o depósito.
-     * @param valor 
+     * @param valor Valor do deposito
      */
     public abstract void depositar(double valor);
     

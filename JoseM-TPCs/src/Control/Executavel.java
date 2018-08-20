@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 public class Executavel {
     /**
      * Metodo Main da classe executavel
-     * @param args 
+     * @param args Argumento do main
      */
     public static void main(String[] args) {
         

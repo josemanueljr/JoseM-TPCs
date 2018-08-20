@@ -6,7 +6,8 @@
 package Model;
 
 /**
- *
+ *Classe conta corrente, Subclasse de
+ * @see ContaBancaria
  * @author JoseM
  */
 public class ContaCorrente extends ContaBancaria implements Imprimivel {
@@ -45,7 +46,7 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
     /**
      * Método Overrided da classe mãe
      * @see ContaBancaria
-     * @param valor 
+     * @param valor  Do deposito
      */
     @Override
     public void sacar(double valor) {
@@ -60,7 +61,7 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
      /**
      * Método Overrided da classe mãe
      * @see ContaBancaria
-     * @param valor 
+     * @param valor Valor do deposito
      */
     @Override
     public void depositar(double valor) {
@@ -73,7 +74,7 @@ public class ContaCorrente extends ContaBancaria implements Imprimivel {
      /**
      * Método Overrided da interface
      * @see Imprimivel
-     * @param valor 
+     * 
      */
     @Override
     public void mostrarDados() {
