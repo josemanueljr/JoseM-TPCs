@@ -30,9 +30,15 @@ public class Executavel {
             System.out.print(vect.get(i)+" - ");
         }
         Estatistica est=new Estatistica();
-        
+        System.out.println("");
         System.out.println("----------Moda--------------");
         System.out.println(est.moda(vect, vect.size()));
+        
+        System.out.println("-----------Mediana--------------");
+        System.out.println(est.mediana(vect, vect.size()));
+        
+        System.out.println("-----------Media--------------");
+        System.out.println(est.media(vect, vect.size()));
         
     }
 }
