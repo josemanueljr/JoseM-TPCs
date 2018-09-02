@@ -47,9 +47,9 @@ public class Estatistica {
          return vMediana;
      }
      
-     public double media(Vector<Integer> vect, int tamanho){
+     public double media(Vector<Integer> vect, double tamanho){
         double vMedia=0;
-        int soma=0;
+        double soma=0;
         for(int i=0; i<tamanho;i++){
             soma=soma+vect.get(i);
         }
