@@ -27,7 +27,6 @@ public class SomaVector {
     }
     
     public static double somaV(double soma, int pos, Vector<Integer> vect){
-        System.out.println("Execução"+pos );
         int tamanho=vect.size();
         if (pos==tamanho){
             return soma;
