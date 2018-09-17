@@ -6,6 +6,7 @@
 package View;
 
 import java.awt.Event;
+import java.awt.Font;
 import java.awt.event.KeyEvent;
 import javafx.scene.input.KeyCode;
 import javax.swing.BorderFactory;
@@ -40,35 +41,35 @@ public class Formulario extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         btGravar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lbCodigo = new javax.swing.JLabel();
         tfCodigo = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lbApelido = new javax.swing.JLabel();
         tfApelido = new javax.swing.JTextField();
         tfNome = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lbNome = new javax.swing.JLabel();
+        lbDataNasc = new javax.swing.JLabel();
+        lbBI = new javax.swing.JLabel();
         tfBI = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        lbSexo = new javax.swing.JLabel();
         rdMasc = new javax.swing.JRadioButton();
         rdFemin = new javax.swing.JRadioButton();
-        jLabel7 = new javax.swing.JLabel();
+        lbNaturalidade = new javax.swing.JLabel();
         tfNaturalidade = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        lbEmail = new javax.swing.JLabel();
         tfEmail = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        lbContactos = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        lbMovel = new javax.swing.JLabel();
+        lbFixo = new javax.swing.JLabel();
         tfMovel = new javax.swing.JTextField();
         tfFixo = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
+        lbEstadoC = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel13 = new javax.swing.JLabel();
+        lbEndereco = new javax.swing.JLabel();
         tfEndereco = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
+        lbSalario = new javax.swing.JLabel();
         tfSalario = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
+        lbObservacao = new javax.swing.JLabel();
         tfObservacao = new javax.swing.JTextField();
         formatedTfData = new javax.swing.JFormattedTextField();
 
@@ -131,7 +132,15 @@ public class Formulario extends javax.swing.JFrame {
 
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setText("Código");
+        lbCodigo.setText("Código");
+        lbCodigo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbCodigoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbCodigoMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -140,7 +149,7 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(28, 25, 0, 0);
-        jPanel3.add(jLabel1, gridBagConstraints);
+        jPanel3.add(lbCodigo, gridBagConstraints);
 
         tfCodigo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfCodigo.addActionListener(new java.awt.event.ActionListener() {
@@ -165,15 +174,23 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(tfCodigo, gridBagConstraints);
 
-        jLabel2.setText("Apelido");
+        lbApelido.setText("Apelido");
+        lbApelido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbApelidoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbApelidoMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 191;
+        gridBagConstraints.ipadx = 149;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(4, 25, 0, 0);
-        jPanel3.add(jLabel2, gridBagConstraints);
+        jPanel3.add(lbApelido, gridBagConstraints);
 
         tfApelido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfApelido.addActionListener(new java.awt.event.ActionListener() {
@@ -221,35 +238,59 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(tfNome, gridBagConstraints);
 
-        jLabel3.setText("Nome Completo");
+        lbNome.setText("Nome Completo");
+        lbNome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbNomeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbNomeMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 151;
+        gridBagConstraints.ipadx = 110;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
-        jPanel3.add(jLabel3, gridBagConstraints);
+        jPanel3.add(lbNome, gridBagConstraints);
 
-        jLabel4.setText("Data de Nascimento[dd/mm/aa]");
+        lbDataNasc.setText("Data de Nascimento[dd/mm/aa]");
+        lbDataNasc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbDataNascMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbDataNascMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 76;
+        gridBagConstraints.ipadx = 23;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(5, 23, 0, 0);
-        jPanel3.add(jLabel4, gridBagConstraints);
+        jPanel3.add(lbDataNasc, gridBagConstraints);
 
-        jLabel5.setText("Numero de BI");
+        lbBI.setText("Numero de BI");
+        lbBI.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbBIMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbBIMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 115;
+        gridBagConstraints.ipadx = 107;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
-        jPanel3.add(jLabel5, gridBagConstraints);
+        jPanel3.add(lbBI, gridBagConstraints);
 
         tfBI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfBI.addActionListener(new java.awt.event.ActionListener() {
@@ -274,7 +315,15 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(tfBI, gridBagConstraints);
 
-        jLabel6.setText("Sexo");
+        lbSexo.setText("Sexo");
+        lbSexo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbSexoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbSexoMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -282,7 +331,7 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 121;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(33, 57, 0, 0);
-        jPanel3.add(jLabel6, gridBagConstraints);
+        jPanel3.add(lbSexo, gridBagConstraints);
 
         buttonGroup1.add(rdMasc);
         rdMasc.setText("Masculino");
@@ -314,7 +363,15 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 18, 0, 0);
         jPanel3.add(rdFemin, gridBagConstraints);
 
-        jLabel7.setText("Naturalidade");
+        lbNaturalidade.setText("Naturalidade");
+        lbNaturalidade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbNaturalidadeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbNaturalidadeMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
@@ -322,7 +379,7 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 165;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(4, 57, 0, 0);
-        jPanel3.add(jLabel7, gridBagConstraints);
+        jPanel3.add(lbNaturalidade, gridBagConstraints);
 
         tfNaturalidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfNaturalidade.addActionListener(new java.awt.event.ActionListener() {
@@ -347,7 +404,15 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
         jPanel3.add(tfNaturalidade, gridBagConstraints);
 
-        jLabel8.setText("E-mail");
+        lbEmail.setText("E-mail");
+        lbEmail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbEmailMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbEmailMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
@@ -355,7 +420,7 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 198;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
-        jPanel3.add(jLabel8, gridBagConstraints);
+        jPanel3.add(lbEmail, gridBagConstraints);
 
         tfEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfEmail.addActionListener(new java.awt.event.ActionListener() {
@@ -377,7 +442,15 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
         jPanel3.add(tfEmail, gridBagConstraints);
 
-        jLabel9.setText("Contactos");
+        lbContactos.setText("Contactos");
+        lbContactos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbContactosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbContactosMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 8;
@@ -385,13 +458,29 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 177;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
-        jPanel3.add(jLabel9, gridBagConstraints);
+        jPanel3.add(lbContactos, gridBagConstraints);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
-        jLabel10.setText("Móvel:");
+        lbMovel.setText("Móvel:");
+        lbMovel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbMovelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbMovelMouseExited(evt);
+            }
+        });
 
-        jLabel11.setText("Fixo:");
+        lbFixo.setText("Fixo:");
+        lbFixo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbFixoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbFixoMouseExited(evt);
+            }
+        });
 
         tfMovel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfMovel.addActionListener(new java.awt.event.ActionListener() {
@@ -429,12 +518,12 @@ public class Formulario extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbFixo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbMovel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tfMovel, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                    .addComponent(tfMovel, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
                     .addComponent(tfFixo))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -443,11 +532,11 @@ public class Formulario extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
+                    .addComponent(lbMovel)
                     .addComponent(tfMovel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
+                    .addComponent(lbFixo)
                     .addComponent(tfFixo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -462,15 +551,23 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 24);
         jPanel3.add(jPanel5, gridBagConstraints);
 
-        jLabel12.setText("Estado Civil");
+        lbEstadoC.setText("Estado Civil");
+        lbEstadoC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbEstadoCMouseEntered1(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbEstadoCMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 125;
+        gridBagConstraints.ipadx = 118;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
-        jPanel3.add(jLabel12, gridBagConstraints);
+        jPanel3.add(lbEstadoC, gridBagConstraints);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro", "Casado", "Divorciado", "Viuvo" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -482,15 +579,23 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(jComboBox1, gridBagConstraints);
 
-        jLabel13.setText("Endereço");
+        lbEndereco.setText("Endereço");
+        lbEndereco.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbEnderecoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbEnderecoMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 135;
+        gridBagConstraints.ipadx = 129;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
-        jPanel3.add(jLabel13, gridBagConstraints);
+        jPanel3.add(lbEndereco, gridBagConstraints);
 
         tfEndereco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfEndereco.addActionListener(new java.awt.event.ActionListener() {
@@ -512,7 +617,15 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 41, 0);
         jPanel3.add(tfEndereco, gridBagConstraints);
 
-        jLabel14.setText("Salário");
+        lbSalario.setText("Salário");
+        lbSalario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbSalarioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbSalarioMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 12;
@@ -520,7 +633,7 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 194;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
-        jPanel3.add(jLabel14, gridBagConstraints);
+        jPanel3.add(lbSalario, gridBagConstraints);
 
         tfSalario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfSalario.addActionListener(new java.awt.event.ActionListener() {
@@ -545,7 +658,15 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
         jPanel3.add(tfSalario, gridBagConstraints);
 
-        jLabel15.setText("Observação");
+        lbObservacao.setText("Observação");
+        lbObservacao.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbObservacaoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbObservacaoMouseExited(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 14;
@@ -553,7 +674,7 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 168;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
-        jPanel3.add(jLabel15, gridBagConstraints);
+        jPanel3.add(lbObservacao, gridBagConstraints);
 
         tfObservacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfObservacao.addActionListener(new java.awt.event.ActionListener() {
@@ -1022,6 +1143,156 @@ public class Formulario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_tfCodigoKeyTyped
 
+    private void lbCodigoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbCodigoMouseEntered
+        // TODO add your handling code here:
+       lbCodigo.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbCodigoMouseEntered
+
+    private void lbApelidoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbApelidoMouseEntered
+        // TODO add your handling code here:
+        lbApelido.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbApelidoMouseEntered
+
+    private void lbNomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbNomeMouseEntered
+        // TODO add your handling code here:
+        lbNome.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbNomeMouseEntered
+
+    private void lbDataNascMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbDataNascMouseEntered
+        // TODO add your handling code here:
+        lbDataNasc.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbDataNascMouseEntered
+
+    private void lbBIMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbBIMouseEntered
+        // TODO add your handling code here:
+        lbBI.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbBIMouseEntered
+
+    private void lbEstadoCMouseEntered1(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbEstadoCMouseEntered1
+        // TODO add your handling code here:
+        lbEstadoC.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbEstadoCMouseEntered1
+
+    private void lbEnderecoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbEnderecoMouseEntered
+        // TODO add your handling code here:
+        lbEndereco.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbEnderecoMouseEntered
+
+    private void lbSexoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbSexoMouseEntered
+        // TODO add your handling code here:
+        lbSexo.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbSexoMouseEntered
+
+    private void lbNaturalidadeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbNaturalidadeMouseEntered
+        // TODO add your handling code here:
+        lbNaturalidade.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbNaturalidadeMouseEntered
+
+    private void lbEmailMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbEmailMouseEntered
+        // TODO add your handling code here:
+        lbEmail.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbEmailMouseEntered
+
+    private void lbContactosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbContactosMouseEntered
+        // TODO add your handling code here:
+        lbContactos.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbContactosMouseEntered
+
+    private void lbMovelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbMovelMouseEntered
+        // TODO add your handling code here:
+        lbMovel.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbMovelMouseEntered
+
+    private void lbFixoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbFixoMouseEntered
+        // TODO add your handling code here:
+        lbFixo.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbFixoMouseEntered
+
+    private void lbSalarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbSalarioMouseEntered
+        // TODO add your handling code here:
+        lbSalario.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbSalarioMouseEntered
+
+    private void lbObservacaoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbObservacaoMouseEntered
+        // TODO add your handling code here:
+        lbObservacao.setFont(new Font("Tahoma", 1, 11));
+    }//GEN-LAST:event_lbObservacaoMouseEntered
+
+    private void lbCodigoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbCodigoMouseExited
+        // TODO add your handling code here:
+        lbCodigo.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbCodigoMouseExited
+
+    private void lbApelidoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbApelidoMouseExited
+        // TODO add your handling code here:
+        lbApelido.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbApelidoMouseExited
+
+    private void lbNomeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbNomeMouseExited
+        // TODO add your handling code here:
+        lbNome.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbNomeMouseExited
+
+    private void lbDataNascMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbDataNascMouseExited
+        // TODO add your handling code here:
+        lbDataNasc.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbDataNascMouseExited
+
+    private void lbBIMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbBIMouseExited
+        // TODO add your handling code here:
+        lbBI.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbBIMouseExited
+
+    private void lbEstadoCMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbEstadoCMouseExited
+        // TODO add your handling code here:
+        lbEstadoC.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbEstadoCMouseExited
+
+    private void lbEnderecoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbEnderecoMouseExited
+        // TODO add your handling code here:
+        lbEndereco.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbEnderecoMouseExited
+
+    private void lbSexoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbSexoMouseExited
+        // TODO add your handling code here:
+        lbSexo.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbSexoMouseExited
+
+    private void lbNaturalidadeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbNaturalidadeMouseExited
+        // TODO add your handling code here:
+        lbNaturalidade.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbNaturalidadeMouseExited
+
+    private void lbEmailMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbEmailMouseExited
+        // TODO add your handling code here:
+        lbEmail.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbEmailMouseExited
+
+    private void lbContactosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbContactosMouseExited
+        // TODO add your handling code here:
+        lbContactos.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbContactosMouseExited
+
+    private void lbMovelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbMovelMouseExited
+        // TODO add your handling code here:
+        lbMovel.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbMovelMouseExited
+
+    private void lbFixoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbFixoMouseExited
+        // TODO add your handling code here:
+        lbFixo.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbFixoMouseExited
+
+    private void lbSalarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbSalarioMouseExited
+        // TODO add your handling code here:
+        lbSalario.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbSalarioMouseExited
+
+    private void lbObservacaoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbObservacaoMouseExited
+        // TODO add your handling code here:
+        lbObservacao.setFont(new Font("Tahoma", 0, 11));
+    }//GEN-LAST:event_lbObservacaoMouseExited
+
     
     private void validaNomes(KeyEvent evt, char caracter){
         if (((caracter < 'A') || (caracter > 'z'))
@@ -1071,27 +1342,27 @@ public class Formulario extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JFormattedTextField formatedTfData;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel lbApelido;
+    private javax.swing.JLabel lbBI;
+    private javax.swing.JLabel lbCodigo;
+    private javax.swing.JLabel lbContactos;
+    private javax.swing.JLabel lbDataNasc;
+    private javax.swing.JLabel lbEmail;
+    private javax.swing.JLabel lbEndereco;
+    private javax.swing.JLabel lbEstadoC;
+    private javax.swing.JLabel lbFixo;
+    private javax.swing.JLabel lbMovel;
+    private javax.swing.JLabel lbNaturalidade;
+    private javax.swing.JLabel lbNome;
+    private javax.swing.JLabel lbObservacao;
+    private javax.swing.JLabel lbSalario;
+    private javax.swing.JLabel lbSexo;
     private javax.swing.JRadioButton rdFemin;
     private javax.swing.JRadioButton rdMasc;
     private javax.swing.JTextField tfApelido;
