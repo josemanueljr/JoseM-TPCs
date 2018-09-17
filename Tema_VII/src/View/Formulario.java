@@ -69,7 +69,7 @@ public class Formulario extends javax.swing.JFrame {
         formatedTfData = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -284,6 +284,11 @@ public class Formulario extends javax.swing.JFrame {
                 tfNaturalidadeActionPerformed(evt);
             }
         });
+        tfNaturalidade.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tfNaturalidadeKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
@@ -347,6 +352,11 @@ public class Formulario extends javax.swing.JFrame {
         tfFixo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfFixoActionPerformed(evt);
+            }
+        });
+        tfFixo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tfFixoKeyTyped(evt);
             }
         });
 
@@ -640,6 +650,39 @@ public class Formulario extends javax.swing.JFrame {
                 
         }
     }//GEN-LAST:event_tfMovelKeyTyped
+
+    private void tfNaturalidadeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNaturalidadeKeyTyped
+        // TODO add your handling code here:
+        
+        char caracter= evt.getKeyChar();
+        
+        validaNomes(evt, caracter);
+    }//GEN-LAST:event_tfNaturalidadeKeyTyped
+
+    private void tfFixoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfFixoKeyTyped
+        // TODO add your handling code here:
+        
+        char caracter = evt.getKeyChar();
+        
+         if (tfFixo.getText().length()<1) {
+            if (((caracter < '2') || (caracter > '2'))
+                        && (caracter != '\b')) {
+                    evt.consume();
+                } 
+        }
+        
+        if (((caracter < '0') || (caracter > '9'))
+                        && (caracter != '\b')) {
+                    evt.consume();
+                }
+        
+        if (tfFixo.getText().length()>7) {
+            
+                    evt.consume();
+                
+        }
+        
+    }//GEN-LAST:event_tfFixoKeyTyped
 
     
     private void validaNomes(KeyEvent evt, char caracter){
