@@ -5,6 +5,7 @@
  */
 package View;
 
+import java.awt.Color;
 import java.awt.Event;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
@@ -151,7 +152,17 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(28, 25, 0, 0);
         jPanel3.add(lbCodigo, gridBagConstraints);
 
+        tfCodigo.setForeground(new java.awt.Color(204, 204, 204));
+        tfCodigo.setText("123456");
         tfCodigo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfCodigo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfCodigoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                tfCodigoFocusLost(evt);
+            }
+        });
         tfCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfCodigoActionPerformed(evt);
@@ -192,7 +203,17 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 25, 0, 0);
         jPanel3.add(lbApelido, gridBagConstraints);
 
+        tfApelido.setForeground(new java.awt.Color(204, 204, 204));
+        tfApelido.setText("Matsinhe");
         tfApelido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfApelido.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfApelidoFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                tfApelidoFocusLost(evt);
+            }
+        });
         tfApelido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfApelidoActionPerformed(evt);
@@ -215,7 +236,14 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(tfApelido, gridBagConstraints);
 
+        tfNome.setForeground(new java.awt.Color(204, 204, 204));
+        tfNome.setText("Valter");
         tfNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfNome.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfNomeFocusGained(evt);
+            }
+        });
         tfNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNomeActionPerformed(evt);
@@ -292,7 +320,14 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(lbBI, gridBagConstraints);
 
+        tfBI.setForeground(new java.awt.Color(204, 204, 204));
+        tfBI.setText("123456789012B");
         tfBI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfBI.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfBIFocusGained(evt);
+            }
+        });
         tfBI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfBIActionPerformed(evt);
@@ -381,7 +416,14 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 57, 0, 0);
         jPanel3.add(lbNaturalidade, gridBagConstraints);
 
+        tfNaturalidade.setForeground(new java.awt.Color(204, 204, 204));
+        tfNaturalidade.setText("Moçambicano");
         tfNaturalidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfNaturalidade.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfNaturalidadeFocusGained(evt);
+            }
+        });
         tfNaturalidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNaturalidadeActionPerformed(evt);
@@ -422,7 +464,14 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
         jPanel3.add(lbEmail, gridBagConstraints);
 
+        tfEmail.setForeground(new java.awt.Color(204, 204, 204));
+        tfEmail.setText("tomesiqua@gmail.com");
         tfEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfEmail.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfEmailFocusGained(evt);
+            }
+        });
         tfEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfEmailActionPerformed(evt);
@@ -482,7 +531,14 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
 
+        tfMovel.setForeground(new java.awt.Color(204, 204, 204));
+        tfMovel.setText("821234567");
         tfMovel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfMovel.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfMovelFocusGained(evt);
+            }
+        });
         tfMovel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfMovelActionPerformed(evt);
@@ -497,7 +553,14 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
 
+        tfFixo.setForeground(new java.awt.Color(204, 204, 204));
+        tfFixo.setText("21654321");
         tfFixo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfFixo.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfFixoFocusGained(evt);
+            }
+        });
         tfFixo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfFixoActionPerformed(evt);
@@ -597,7 +660,14 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(lbEndereco, gridBagConstraints);
 
+        tfEndereco.setForeground(new java.awt.Color(204, 204, 204));
+        tfEndereco.setText("Bairro da Liberdade, Nr. 123");
         tfEndereco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfEndereco.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfEnderecoFocusGained(evt);
+            }
+        });
         tfEndereco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfEnderecoActionPerformed(evt);
@@ -635,7 +705,14 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
         jPanel3.add(lbSalario, gridBagConstraints);
 
+        tfSalario.setForeground(new java.awt.Color(204, 204, 204));
+        tfSalario.setText("3500.00");
         tfSalario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfSalario.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfSalarioFocusGained(evt);
+            }
+        });
         tfSalario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfSalarioActionPerformed(evt);
@@ -676,7 +753,14 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
         jPanel3.add(lbObservacao, gridBagConstraints);
 
+        tfObservacao.setForeground(new java.awt.Color(204, 204, 204));
+        tfObservacao.setText("Boa pessoa");
         tfObservacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        tfObservacao.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tfObservacaoFocusGained(evt);
+            }
+        });
         tfObservacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfObservacaoActionPerformed(evt);
@@ -697,7 +781,14 @@ public class Formulario extends javax.swing.JFrame {
         jPanel3.add(tfObservacao, gridBagConstraints);
 
         formatedTfData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        formatedTfData.setForeground(new java.awt.Color(204, 204, 204));
         formatedTfData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/M/yy"))));
+        formatedTfData.setText("17/10/93");
+        formatedTfData.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                formatedTfDataFocusGained(evt);
+            }
+        });
         formatedTfData.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formatedTfDataKeyPressed(evt);
@@ -1292,6 +1383,95 @@ public class Formulario extends javax.swing.JFrame {
         // TODO add your handling code here:
         lbObservacao.setFont(new Font("Tahoma", 0, 11));
     }//GEN-LAST:event_lbObservacaoMouseExited
+
+    private void tfCodigoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfCodigoFocusGained
+        // TODO add your handling code here:
+        tfCodigo.setText("");
+        tfCodigo.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfCodigoFocusGained
+
+    private void tfApelidoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfApelidoFocusGained
+        // TODO add your handling code here:
+        tfApelido.setText("");
+        tfApelido.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfApelidoFocusGained
+
+    private void tfNomeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfNomeFocusGained
+        // TODO add your handling code here:
+        tfNome.setText("");
+        tfNome.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfNomeFocusGained
+
+    private void formatedTfDataFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_formatedTfDataFocusGained
+        // TODO add your handling code here:
+        formatedTfData.setText("");
+        formatedTfData.setForeground(Color.BLACK);
+    }//GEN-LAST:event_formatedTfDataFocusGained
+
+    private void tfBIFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfBIFocusGained
+        // TODO add your handling code here:
+        tfBI.setText("");
+        tfBI.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfBIFocusGained
+
+    private void tfEnderecoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfEnderecoFocusGained
+        // TODO add your handling code here:
+        tfEndereco.setText("");
+        tfEndereco.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfEnderecoFocusGained
+
+    private void tfNaturalidadeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfNaturalidadeFocusGained
+        // TODO add your handling code here:
+        tfNaturalidade.setText("");
+        tfNaturalidade.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfNaturalidadeFocusGained
+
+    private void tfEmailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfEmailFocusGained
+        // TODO add your handling code here:
+        tfEmail.setText("");
+        tfEmail.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfEmailFocusGained
+
+    private void tfMovelFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfMovelFocusGained
+        // TODO add your handling code here:
+        tfMovel.setText("");
+        tfMovel.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfMovelFocusGained
+
+    private void tfFixoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfFixoFocusGained
+        // TODO add your handling code here:
+        tfFixo.setText("");
+        tfFixo.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfFixoFocusGained
+
+    private void tfSalarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfSalarioFocusGained
+        // TODO add your handling code here:
+        tfSalario.setText("");
+        tfSalario.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfSalarioFocusGained
+
+    private void tfObservacaoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfObservacaoFocusGained
+        // TODO add your handling code here:
+        tfObservacao.setText("");
+        tfObservacao.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfObservacaoFocusGained
+    
+    private void tfCodigoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfCodigoFocusLost
+        // TODO add your handling code here:
+        
+        if(tfCodigo.getText().length()<=0){
+            tfCodigo.setText("123456");
+            tfCodigo.setForeground(new java.awt.Color(204, 204, 204));
+        }
+    }//GEN-LAST:event_tfCodigoFocusLost
+
+    private void tfApelidoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfApelidoFocusLost
+        // TODO add your handling code here:
+        if(tfApelido.getText().length()<=0){
+            tfApelido.setText("123456");
+            tfApelido.setForeground(new java.awt.Color(204, 204, 204));
+        }
+    }//GEN-LAST:event_tfApelidoFocusLost
 
     
     private void validaNomes(KeyEvent evt, char caracter){
