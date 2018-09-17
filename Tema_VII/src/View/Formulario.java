@@ -7,6 +7,8 @@ package View;
 
 import java.awt.Event;
 import java.awt.event.KeyEvent;
+import javafx.scene.input.KeyCode;
+import javax.swing.BorderFactory;
 
 /**
  *
@@ -31,10 +33,12 @@ public class Formulario extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        btGravar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         tfCodigo = new javax.swing.JTextField();
@@ -81,7 +85,7 @@ public class Formulario extends javax.swing.JFrame {
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGap(0, 397, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel6, java.awt.BorderLayout.LINE_START);
@@ -94,20 +98,33 @@ public class Formulario extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 98, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
+
+        btGravar.setText("Gravar");
+        btGravar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGravarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 666, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(342, Short.MAX_VALUE)
+                .addComponent(btGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(245, 245, 245))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(btGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel4, java.awt.BorderLayout.PAGE_END);
@@ -125,9 +142,18 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(28, 25, 0, 0);
         jPanel3.add(jLabel1, gridBagConstraints);
 
+        tfCodigo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfCodigoActionPerformed(evt);
+            }
+        });
+        tfCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfCodigoKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tfCodigoKeyTyped(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -149,12 +175,16 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 25, 0, 0);
         jPanel3.add(jLabel2, gridBagConstraints);
 
+        tfApelido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfApelido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfApelidoActionPerformed(evt);
             }
         });
         tfApelido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfApelidoKeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfApelidoKeyTyped(evt);
             }
@@ -168,12 +198,16 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(tfApelido, gridBagConstraints);
 
+        tfNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNomeActionPerformed(evt);
             }
         });
         tfNome.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfNomeKeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfNomeKeyTyped(evt);
             }
@@ -217,12 +251,16 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(jLabel5, gridBagConstraints);
 
+        tfBI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfBI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfBIActionPerformed(evt);
             }
         });
         tfBI.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfBIKeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfBIKeyTyped(evt);
             }
@@ -246,10 +284,16 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(33, 57, 0, 0);
         jPanel3.add(jLabel6, gridBagConstraints);
 
+        buttonGroup1.add(rdMasc);
         rdMasc.setText("Masculino");
         rdMasc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdMascActionPerformed(evt);
+            }
+        });
+        rdMasc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                rdMascKeyPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -260,6 +304,7 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 57, 0, 0);
         jPanel3.add(rdMasc, gridBagConstraints);
 
+        buttonGroup1.add(rdFemin);
         rdFemin.setText("Feminino");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -279,12 +324,16 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 57, 0, 0);
         jPanel3.add(jLabel7, gridBagConstraints);
 
+        tfNaturalidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfNaturalidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNaturalidadeActionPerformed(evt);
             }
         });
         tfNaturalidade.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfNaturalidadeKeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfNaturalidadeKeyTyped(evt);
             }
@@ -308,9 +357,15 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
         jPanel3.add(jLabel8, gridBagConstraints);
 
+        tfEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfEmailActionPerformed(evt);
+            }
+        });
+        tfEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfEmailKeyPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -338,23 +393,31 @@ public class Formulario extends javax.swing.JFrame {
 
         jLabel11.setText("Fixo:");
 
+        tfMovel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfMovel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfMovelActionPerformed(evt);
             }
         });
         tfMovel.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfMovelKeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfMovelKeyTyped(evt);
             }
         });
 
+        tfFixo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfFixo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfFixoActionPerformed(evt);
             }
         });
         tfFixo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfFixoKeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfFixoKeyTyped(evt);
             }
@@ -429,9 +492,15 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(jLabel13, gridBagConstraints);
 
+        tfEndereco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfEndereco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfEnderecoActionPerformed(evt);
+            }
+        });
+        tfEndereco.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfEnderecoKeyPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -453,9 +522,18 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
         jPanel3.add(jLabel14, gridBagConstraints);
 
+        tfSalario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfSalario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfSalarioActionPerformed(evt);
+            }
+        });
+        tfSalario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfSalarioKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tfSalarioKeyTyped(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -477,9 +555,15 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 0, 0);
         jPanel3.add(jLabel15, gridBagConstraints);
 
+        tfObservacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfObservacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfObservacaoActionPerformed(evt);
+            }
+        });
+        tfObservacao.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tfObservacaoKeyPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -491,8 +575,12 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 57, 41, 0);
         jPanel3.add(tfObservacao, gridBagConstraints);
 
+        formatedTfData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         formatedTfData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/M/yy"))));
         formatedTfData.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formatedTfDataKeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 formatedTfDataKeyTyped(evt);
             }
@@ -684,6 +772,256 @@ public class Formulario extends javax.swing.JFrame {
         
     }//GEN-LAST:event_tfFixoKeyTyped
 
+    private void tfSalarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfSalarioKeyTyped
+        // TODO add your handling code here:
+        char caracter=evt.getKeyChar();
+        
+        if (((caracter < '0') || (caracter > '9'))
+                        && (caracter != '\b') && (caracter != '.')) {
+                    evt.consume();
+                }
+    }//GEN-LAST:event_tfSalarioKeyTyped
+
+    private void tfCodigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfCodigoKeyPressed
+        // TODO add your handling code here:
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfApelido.requestFocus();
+                } 
+        
+        
+    }//GEN-LAST:event_tfCodigoKeyPressed
+
+    private void tfApelidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfApelidoKeyPressed
+        // TODO add your handling code here:
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfNome.requestFocus();
+                } 
+        
+        
+    }//GEN-LAST:event_tfApelidoKeyPressed
+
+    private void tfNomeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNomeKeyPressed
+        // TODO add your handling code here:
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    formatedTfData.requestFocus();
+                } 
+        
+        
+    }//GEN-LAST:event_tfNomeKeyPressed
+
+    private void formatedTfDataKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formatedTfDataKeyPressed
+        // TODO add your handling code here:
+       int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfBI.requestFocus();
+                } 
+         
+    }//GEN-LAST:event_formatedTfDataKeyPressed
+
+    private void tfBIKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfBIKeyPressed
+        // TODO add your handling code here:
+        
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfEndereco.requestFocus();
+                } 
+        
+    }//GEN-LAST:event_tfBIKeyPressed
+
+    private void tfEnderecoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfEnderecoKeyPressed
+        // TODO add your handling code here:
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    rdMasc.requestFocus();
+                } 
+        
+    }//GEN-LAST:event_tfEnderecoKeyPressed
+
+    private void rdMascKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rdMascKeyPressed
+        // TODO add your handling code here:
+        
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfNaturalidade.requestFocus();
+                } 
+        
+    }//GEN-LAST:event_rdMascKeyPressed
+
+    private void tfNaturalidadeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNaturalidadeKeyPressed
+        // TODO add your handling code here:
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfEmail.requestFocus();
+                } 
+        
+    }//GEN-LAST:event_tfNaturalidadeKeyPressed
+
+    private void tfEmailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfEmailKeyPressed
+        // TODO add your handling code here:
+        
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfMovel.requestFocus();
+                } 
+        
+    }//GEN-LAST:event_tfEmailKeyPressed
+
+    private void tfMovelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfMovelKeyPressed
+        // TODO add your handling code here:
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfFixo.requestFocus();
+                } 
+        
+    }//GEN-LAST:event_tfMovelKeyPressed
+
+    private void tfFixoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfFixoKeyPressed
+        // TODO add your handling code here:
+        
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfSalario.requestFocus();
+                } 
+        
+    }//GEN-LAST:event_tfFixoKeyPressed
+
+    private void tfSalarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfSalarioKeyPressed
+        // TODO add your handling code here:
+        
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    tfObservacao.requestFocus();
+                } 
+        
+    }//GEN-LAST:event_tfSalarioKeyPressed
+
+    private void tfObservacaoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfObservacaoKeyPressed
+        // TODO add your handling code here:
+        
+        int caracter=evt.getKeyCode();
+        
+        if ((caracter == KeyEvent.VK_ENTER)
+                        && (caracter != '\b')) {
+                    btGravar.requestFocus();
+                } 
+        
+    }//GEN-LAST:event_tfObservacaoKeyPressed
+
+    private void btGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGravarActionPerformed
+        // TODO add your handling code here:
+        
+        if(tfSalario.getText().length()<=0){     
+            tfSalario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfSalario.requestFocus();
+        }else tfSalario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        
+        if(tfFixo.getText().length()<=0){     
+            tfFixo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfFixo.requestFocus();
+        }else tfFixo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        
+        if(tfMovel.getText().length()<=0){     
+            tfMovel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfMovel.requestFocus();
+        }else tfMovel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        
+        if(tfEmail.getText().length()<=0){     
+            tfEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfEmail.requestFocus();
+        }else tfEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        
+        if(tfNaturalidade.getText().length()<=0){     
+            tfNaturalidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfNaturalidade.requestFocus();
+        }else tfNaturalidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        
+        if(tfEndereco.getText().length()<=0){     
+            tfEndereco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfEndereco.requestFocus();
+        }else tfEndereco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        
+        if(tfBI.getText().length()<=0){     
+            tfBI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfBI.requestFocus();
+        }else tfBI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        
+        if(formatedTfData.getText().length()<=0){     
+            formatedTfData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            formatedTfData.requestFocus();
+        }else formatedTfData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        
+        if(tfNome.getText().length()<=0){     
+            tfNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfNome.requestFocus();
+        }else tfNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        
+        if(tfApelido.getText().length()<=0){     
+            tfApelido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfApelido.requestFocus();
+        }else tfApelido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        
+        if(tfCodigo.getText().length()<=0){     
+            tfCodigo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 51)));
+            tfCodigo.requestFocus();
+        }else tfCodigo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+            
+       
+    }//GEN-LAST:event_btGravarActionPerformed
+
+    private void tfCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfCodigoKeyTyped
+        // TODO add your handling code here:
+        char caracter = evt.getKeyChar();
+        
+        
+        if (tfCodigo.getText().length()<12) {
+            if (((caracter < '0') || (caracter > '9'))
+                        && (caracter != '\b')) {
+                    evt.consume();
+                } 
+        }
+        if (tfCodigo.getText().length()>=12) {
+            
+                    evt.consume();
+                
+        }
+    }//GEN-LAST:event_tfCodigoKeyTyped
+
     
     private void validaNomes(KeyEvent evt, char caracter){
         if (((caracter < 'A') || (caracter > 'z'))
@@ -726,7 +1064,11 @@ public class Formulario extends javax.swing.JFrame {
         });
     }
 
+    
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btGravar;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JFormattedTextField formatedTfData;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
