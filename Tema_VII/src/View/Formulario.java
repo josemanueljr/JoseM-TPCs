@@ -87,7 +87,7 @@ public class Formulario extends javax.swing.JFrame {
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 397, Short.MAX_VALUE)
+            .addGap(0, 102, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel6, java.awt.BorderLayout.LINE_START);
@@ -96,7 +96,7 @@ public class Formulario extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 666, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,7 +117,7 @@ public class Formulario extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(342, Short.MAX_VALUE)
+                .addContainerGap(76, Short.MAX_VALUE)
                 .addComponent(btGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(245, 245, 245))
         );
@@ -131,6 +131,7 @@ public class Formulario extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, java.awt.BorderLayout.PAGE_END);
 
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
         lbCodigo.setText("Código");
@@ -179,7 +180,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 119;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
@@ -197,7 +197,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 149;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(4, 25, 0, 0);
@@ -230,14 +229,12 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 220;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(tfApelido, gridBagConstraints);
 
         tfNome.setForeground(new java.awt.Color(204, 204, 204));
-        tfNome.setText("Valter");
         tfNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfNome.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -260,7 +257,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 220;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
@@ -278,7 +274,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 110;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
@@ -296,7 +291,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 23;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(5, 23, 0, 0);
@@ -314,14 +308,12 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 107;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(lbBI, gridBagConstraints);
 
         tfBI.setForeground(new java.awt.Color(204, 204, 204));
-        tfBI.setText("123456789012B");
         tfBI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfBI.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -344,7 +336,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 220;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
@@ -360,7 +351,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 121;
@@ -381,7 +372,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
@@ -391,7 +382,7 @@ public class Formulario extends javax.swing.JFrame {
         buttonGroup1.add(rdFemin);
         rdFemin.setText("Feminino");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
@@ -408,7 +399,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 165;
@@ -417,7 +408,6 @@ public class Formulario extends javax.swing.JFrame {
         jPanel3.add(lbNaturalidade, gridBagConstraints);
 
         tfNaturalidade.setForeground(new java.awt.Color(204, 204, 204));
-        tfNaturalidade.setText("Moçambicano");
         tfNaturalidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfNaturalidade.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -438,7 +428,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 220;
@@ -456,7 +446,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 198;
@@ -465,7 +455,6 @@ public class Formulario extends javax.swing.JFrame {
         jPanel3.add(lbEmail, gridBagConstraints);
 
         tfEmail.setForeground(new java.awt.Color(204, 204, 204));
-        tfEmail.setText("tomesiqua@gmail.com");
         tfEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfEmail.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -483,7 +472,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 220;
@@ -501,7 +490,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 177;
@@ -532,7 +521,6 @@ public class Formulario extends javax.swing.JFrame {
         });
 
         tfMovel.setForeground(new java.awt.Color(204, 204, 204));
-        tfMovel.setText("821234567");
         tfMovel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfMovel.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -554,7 +542,6 @@ public class Formulario extends javax.swing.JFrame {
         });
 
         tfFixo.setForeground(new java.awt.Color(204, 204, 204));
-        tfFixo.setText("21654321");
         tfFixo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfFixo.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -586,8 +573,8 @@ public class Formulario extends javax.swing.JFrame {
                     .addComponent(lbMovel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tfMovel, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
-                    .addComponent(tfFixo))
+                    .addComponent(tfMovel)
+                    .addComponent(tfFixo, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -605,7 +592,7 @@ public class Formulario extends javax.swing.JFrame {
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.gridheight = 3;
@@ -626,7 +613,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 12;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 118;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
@@ -636,7 +622,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 13;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 45;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
@@ -654,14 +639,12 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 14;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 129;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
         jPanel3.add(lbEndereco, gridBagConstraints);
 
         tfEndereco.setForeground(new java.awt.Color(204, 204, 204));
-        tfEndereco.setText("Bairro da Liberdade, Nr. 123");
         tfEndereco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfEndereco.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -681,7 +664,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 15;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 220;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 41, 0);
@@ -697,7 +679,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 194;
@@ -706,7 +688,6 @@ public class Formulario extends javax.swing.JFrame {
         jPanel3.add(lbSalario, gridBagConstraints);
 
         tfSalario.setForeground(new java.awt.Color(204, 204, 204));
-        tfSalario.setText("3500.00");
         tfSalario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfSalario.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -727,7 +708,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 220;
@@ -745,7 +726,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 168;
@@ -754,7 +735,6 @@ public class Formulario extends javax.swing.JFrame {
         jPanel3.add(lbObservacao, gridBagConstraints);
 
         tfObservacao.setForeground(new java.awt.Color(204, 204, 204));
-        tfObservacao.setText("Boa pessoa");
         tfObservacao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         tfObservacao.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -772,7 +752,7 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 15;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 220;
@@ -783,7 +763,6 @@ public class Formulario extends javax.swing.JFrame {
         formatedTfData.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
         formatedTfData.setForeground(new java.awt.Color(204, 204, 204));
         formatedTfData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/M/yy"))));
-        formatedTfData.setText("17/10/93");
         formatedTfData.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 formatedTfDataFocusGained(evt);
@@ -800,7 +779,6 @@ public class Formulario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 220;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 25, 0, 0);
@@ -820,10 +798,6 @@ public class Formulario extends javax.swing.JFrame {
     private void tfApelidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfApelidoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfApelidoActionPerformed
-
-    private void tfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfNomeActionPerformed
 
     private void tfBIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfBIActionPerformed
         // TODO add your handling code here:
@@ -852,19 +826,6 @@ public class Formulario extends javax.swing.JFrame {
     private void tfObservacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfObservacaoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfObservacaoActionPerformed
-
-    private void tfNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNomeKeyTyped
-        // TODO add your handling code here:
-        
-        char caracter = evt.getKeyChar();
-        
-        validaNomes(evt, caracter);
-        /*
-        if (((caracter < 'A') || (caracter > 'z'))
-                        && (caracter != '\b') && (caracter != ' ')) {
-                    evt.consume();
-                }*/
-    }//GEN-LAST:event_tfNomeKeyTyped
 
     private void tfApelidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfApelidoKeyTyped
         // TODO add your handling code here:
@@ -914,7 +875,7 @@ public class Formulario extends javax.swing.JFrame {
                     evt.consume();   
         }
         if (tfBI.getText().length()>=12) {
-            if (((caracter < 'A') || (caracter > 'z'))
+            if (((caracter < 'A') || (caracter > 'Z'))
                         && (caracter != '\b')) {
                     evt.consume();
                 } 
@@ -1017,18 +978,6 @@ public class Formulario extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_tfApelidoKeyPressed
-
-    private void tfNomeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNomeKeyPressed
-        // TODO add your handling code here:
-        int caracter=evt.getKeyCode();
-        
-        if ((caracter == KeyEvent.VK_ENTER)
-                        && (caracter != '\b')) {
-                    formatedTfData.requestFocus();
-                } 
-        
-        
-    }//GEN-LAST:event_tfNomeKeyPressed
 
     private void formatedTfDataKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formatedTfDataKeyPressed
         // TODO add your handling code here:
@@ -1396,12 +1345,6 @@ public class Formulario extends javax.swing.JFrame {
         tfApelido.setForeground(Color.BLACK);
     }//GEN-LAST:event_tfApelidoFocusGained
 
-    private void tfNomeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfNomeFocusGained
-        // TODO add your handling code here:
-        tfNome.setText("");
-        tfNome.setForeground(Color.BLACK);
-    }//GEN-LAST:event_tfNomeFocusGained
-
     private void formatedTfDataFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_formatedTfDataFocusGained
         // TODO add your handling code here:
         formatedTfData.setText("");
@@ -1472,6 +1415,40 @@ public class Formulario extends javax.swing.JFrame {
             tfApelido.setForeground(new java.awt.Color(204, 204, 204));
         }
     }//GEN-LAST:event_tfApelidoFocusLost
+
+    private void tfNomeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNomeKeyTyped
+        // TODO add your handling code here:
+
+        char caracter = evt.getKeyChar();
+
+        validaNomes(evt, caracter);
+        /*
+        if (((caracter < 'A') || (caracter > 'z'))
+            && (caracter != '\b') && (caracter != ' ')) {
+            evt.consume();
+        }*/
+    }//GEN-LAST:event_tfNomeKeyTyped
+
+    private void tfNomeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNomeKeyPressed
+        // TODO add your handling code here:
+        int caracter=evt.getKeyCode();
+
+        if ((caracter == KeyEvent.VK_ENTER)
+            && (caracter != '\b')) {
+            formatedTfData.requestFocus();
+        }
+
+    }//GEN-LAST:event_tfNomeKeyPressed
+
+    private void tfNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNomeActionPerformed
+
+    private void tfNomeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tfNomeFocusGained
+        // TODO add your handling code here:
+        tfNome.setText("");
+        tfNome.setForeground(Color.BLACK);
+    }//GEN-LAST:event_tfNomeFocusGained
 
     
     private void validaNomes(KeyEvent evt, char caracter){
